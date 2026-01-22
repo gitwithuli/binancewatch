@@ -46,7 +46,7 @@ app = BUNDLE(
         'LSUIElement': True,
         'CFBundleName': 'BinanceWatch',
         'CFBundleDisplayName': 'BinanceWatch',
-        'CFBundleShortVersionString': '1.0.0',
+        'CFBundleShortVersionString': '1.0.2',
         'NSHighResolutionCapable': True,
     },
 )

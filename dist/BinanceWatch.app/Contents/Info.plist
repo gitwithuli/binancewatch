@@ -7,7 +7,7 @@
 	<key>CFBundleExecutable</key>
 	<string>BinanceWatch</string>
 	<key>CFBundleIconFile</key>
-	<string>icon-windowed.icns</string>
+	<string>icon.icns</string>
 	<key>CFBundleIdentifier</key>
 	<string>com.binancewatch.app</string>
 	<key>CFBundleInfoDictionaryVersion</key>

@@ -134,6 +134,8 @@ class BinanceWatchApp(rumps.App):
         self.menu.add(None)
         self.menu.add(self.refresh_item)
         self.menu.add(self.vol_menu)
+        self.menu.add(None)
+        self.menu.add(rumps.MenuItem("Quit BinanceWatch", callback=rumps.quit_application))
 
     def make_click_handler(self, coin):
         def handler(_):
