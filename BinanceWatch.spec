@@ -40,7 +40,7 @@ exe = EXE(
 app = BUNDLE(
     exe,
     name='BinanceWatch.app',
-    icon=None,
+    icon='icon.icns',
     bundle_identifier='com.binancewatch.app',
     info_plist={
         'LSUIElement': True,
