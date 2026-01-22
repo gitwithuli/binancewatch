@@ -55,10 +55,20 @@ class BinanceWatchApp(rumps.App):
 
         for ticker in raw_data:
             symbol = ticker['symbol']
+
+            # Skip delivery/quarterly contracts (they have underscores like BTCUSDT_250328)
+            if '_' in symbol:
+                continue
+
             volume_usd = float(ticker['quoteVolume'])
             volume_billions = volume_usd / 1_000_000_000
 
             if volume_billions < self.min_volume:
+                continue
+
+            # Skip extreme volatility (likely delisting/relisting pumps)
+            change_pct = abs(float(ticker['priceChangePercent']))
+            if change_pct > 150:
                 continue
 
             base_coin = None
